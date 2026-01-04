@@ -1,18 +1,8 @@
-{
-  "version": 2,
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "script.js"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  },
-  "functions": {
-    "script.js": {
-      "maxDuration": 30
-    }
-  }
-}
+// Source - https://stackoverflow.com/a
+// Posted by JoyShaheb
+// Retrieved 2026-01-04, License - CC BY-SA 4.0
+
+{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+
+
 
