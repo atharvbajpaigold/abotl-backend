@@ -1,8 +1,16 @@
-// Source - https://stackoverflow.com/a
-// Posted by JoyShaheb
-// Retrieved 2026-01-04, License - CC BY-SA 4.0
 
-{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+
+{
+    "version": 2,
+    "builds": [
+    { "src": "server.js", "use": "@vercel/node" },
+    { "src": "src", "use": "@vercel/static-build" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "server.js" },
+    { "src": "/(.*)", "dest": "/src/$1" }  ]
+}
+
 
 
 
